@@ -1,3 +1,5 @@
+package br.com.sabs.currencyconversion;
+
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -6,16 +8,10 @@ import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
 
-public class AcessarAPI {
-    private String baseCurrency;
-    private String targetCurrency;
-    private double amount;
+public class RequestConversion {
 
-    public Conversao FazerConversao(String baseCurrency, String targetCurrency, double amount) throws IOException,
+    public Conversion Convert(String baseCurrency, String targetCurrency, double amount) throws IOException,
             InterruptedException {
-        this.baseCurrency = baseCurrency;
-        this.targetCurrency = targetCurrency;
-        this.amount = amount;
 
         URI address =
                 URI.create(
@@ -26,6 +22,6 @@ public class AcessarAPI {
                 .uri(address)
                 .build();
         HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
-        return new Gson().fromJson(response.body(), Conversao.class);
+        return new Gson().fromJson(response.body(), Conversion.class);
     }
 }
