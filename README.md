@@ -19,8 +19,3 @@
 <img src="./src/img/terminal/conversor-4.jpg" alt="captura de tela do terminal mostrando o menu da aplicação">
 
 ---
-
-## Desenvolvimento
-
-O programa foi desenvolvido visando o uso das boas práticas e as diretrizes da POO. O menu foi feito em loop com o uso do `while`.   
-A relaçã
