@@ -15,7 +15,7 @@ public class RequestConversion {
 
         URI address =
                 URI.create(
-                        "https://v6.exchangerate-api.com/v6/00f24f5b9458f661be826087/pair/" + baseCurrency + '/' + targetCurrency + '/' + amount);
+                        "https://v6.exchangerate-api.com/v6/myExchangeRateAPID/pair/" + baseCurrency + '/' + targetCurrency + '/' + amount);
 
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
